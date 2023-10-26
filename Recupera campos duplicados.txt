@@ -1,0 +1,11 @@
+Recupera campos duplicados
+no caso, o 024 com o $1 duplicaddo
+
+select * from (
+select Z00R_TEXT, count(*) 
+FROM SEN10.Z00R
+WHERE SUBSTR(Z00R_FIELD_CODE,1,3) = '024'
+GROUP BY Z00R_TEXT
+HAVING COUNT(*) > 1
+ ) sub1 order by 2 desc
+ 
