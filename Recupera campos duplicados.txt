@@ -1,5 +1,5 @@
-Recupera campos duplicados
-no caso, o 024 com o $1 duplicaddo
+# Recupera campos duplicados no catálogo de autoridades, base SEN10
+# a query busca por campos 024 com o $1 duplicado
 
 select * from (
 select Z00R_TEXT, count(*) 
